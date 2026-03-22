@@ -33,11 +33,9 @@ body {
     font-family: 'Press Start 2P', cursive;
     background: linear-gradient(135deg, #0a0e27 0%, #1a1f4a 100%);
     color: var(--secondary-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 0;
+    position: relative;
 }
 
 /* ===========================
@@ -45,7 +43,9 @@ body {
    =========================== */
 
 .page {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -54,6 +54,8 @@ body {
     opacity: 0;
     transition: opacity var(--transition-speed) ease-in-out;
     pointer-events: none;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 .page.active {
@@ -65,13 +67,13 @@ body {
     text-align: center;
     z-index: 10;
     max-width: 600px;
+    width: 90%;
     padding: 40px;
     animation: slideIn 0.5s ease-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 @keyframes slideIn {
@@ -262,7 +264,7 @@ body {
     border-radius: 12px;
     padding: 50px 40px;
     box-shadow: 0 8px 32px rgba(0, 123, 255, 0.2);
-    width: 100%;
+    width: 90%;
     max-width: 600px;
 }
 
@@ -340,7 +342,6 @@ body {
 .celebration-content {
     position: relative;
     z-index: 10;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -492,13 +493,13 @@ body {
     .page-content {
         padding: 30px 20px;
         max-width: 90%;
-        width: 100%;
+        width: 90%;
     }
 
     .modal-content {
         padding: 30px 20px;
         max-width: 90%;
-        width: 100%;
+        width: 90%;
     }
 
     .hearts-container {
@@ -554,13 +555,13 @@ body {
 
     .page-content {
         padding: 20px;
-        width: 100%;
+        width: 90%;
     }
 
     .modal-content {
         padding: 20px;
         border-width: 2px;
-        width: 100%;
+        width: 90%;
     }
 
     .hearts-container {
