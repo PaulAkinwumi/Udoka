@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udoka - A Love Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page 1: Landing Screen -->
+    <section id="page-1" class="page active">
+        <!-- Heart icons at top right -->
+        <div class="hearts-container">
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+        </div>
+
+        <!-- Main content -->
+        <div class="page-content">
+            <h1 class="main-title">Are you ready?</h1>
+            
+            <div class="button-group">
+                <button id="landing-yes-btn" class="btn btn-primary">Yes</button>
+                <button id="landing-no-btn" class="btn btn-secondary">No</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 2: Username Gate -->
+    <section id="page-2" class="page" style="display: none;">
+        <div class="page-content">
+            <h2 class="section-title">Enter your name</h2>
+            
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="username-input" 
+                    class="username-input" 
+                    placeholder="What's your name?"
+                    autocomplete="off"
+                >
+            </div>
+
+            <div id="username-error" class="error-message" style="display: none;">
+                This game is not for you.
+            </div>
+
+            <button id="username-submit-btn" class="btn btn-primary">Submit</button>
+        </div>
+    </section>
+
+    <!-- Page 3: Question Interaction -->
+    <section id="page-3" class="page" style="display: none;">
+        <!-- Heart decorations background -->
+        <div class="decorative-hearts">
+            <span class="deco-heart">💕</span>
+            <span class="deco-heart">💕</span>
+            <span class="deco-heart">💕</span>
+            <span class="deco-heart">💕</span>
+        </div>
+
+        <!-- Modal container -->
+        <div class="page-content modal-content">
+            <!-- Romantic quote (initially hidden) -->
+            <div id="quote-container" class="quote-container" style="display: none;">
+                <p id="quote-text" class="quote-text"></p>
+            </div>
+
+            <!-- Main question -->
+            <h2 id="main-question" class="question">Will you be my girlfriend?</h2>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button id="question-yes-btn" class="btn btn-primary" data-size="0">Yes</button>
+                <button id="question-no-btn" class="btn btn-secondary">No</button>
+            </div>
+
+            <!-- Tracking data attribute -->
+            <div id="no-counter" data-no-count="0" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Page 4: Celebration Screen -->
+    <section id="page-4" class="page" style="display: none;">
+        <!-- Falling petals container -->
+        <div class="petals-container" id="petals-container"></div>
+
+        <!-- Celebration content -->
+        <div class="page-content celebration-content">
+            <h2 class="celebration-message">Thanks for choosing me. I can't wait for our beautiful journey ahead.</h2>
+            <div class="emoji-celebration">🎉 💕 🎉</div>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
