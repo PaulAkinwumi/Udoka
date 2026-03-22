@@ -112,7 +112,10 @@ function handleNoClick() {
 
         // Update Yes button size
         const sizeLevel = Math.min(gameState.noClickCount, 5);
-        questionYesBtn.setAttribute('data-size', sizeLevel);
+        questionYesBtn.setAttribute('data-size', sizeLevel); 
+        
+        // Update No button position (slides under Yes button)
+        questionNoBtn.setAttribute('data-position', sizeLevel);
     }
 }
 
